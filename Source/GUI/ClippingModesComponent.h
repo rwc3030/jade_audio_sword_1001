@@ -3,23 +3,29 @@
 
 #include <JuceHeader.h>
 
-class ClippingModesComponent : public Component {
+class ClippingModesComponent : public Component
+{
 public:
-    enum ClippingMode { Modern, Classic, Hard };
+    enum ClippingMode
+    {
+        Modern,
+        Classic,
+        Hard
+    };
 
     ClippingModesComponent();
-    void paint(Graphics& g) override;
-    void resized() override;
-
     void setClippingMode(ClippingMode mode);
     ClippingMode getCurrentMode() const;
 
 private:
     void updateUIForMode(ClippingMode mode);
-    void cleanupResources(); // New method to clean up resources
 
     ClippingMode currentMode;
-    TextButton modernButton, classicButton, hardButton;
+    TextButton modernButton;
+    TextButton classicButton;
+    TextButton hardButton;
+
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(ClippingModesComponent)
 };
 
 #endif // CLIPPINGMODESCOMPONENT_H

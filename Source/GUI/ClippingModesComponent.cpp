@@ -1,6 +1,7 @@
 #include "ClippingModesComponent.h"
 
-ClippingModesComponent::ClippingModesComponent() {
+ClippingModesComponent::ClippingModesComponent()
+{
     currentMode = Modern; // Default mode
     addAndMakeVisible(modernButton);
     addAndMakeVisible(classicButton);
@@ -13,10 +14,14 @@ ClippingModesComponent::ClippingModesComponent() {
     modernButton.onClick = [this] { setClippingMode(Modern); };
     classicButton.onClick = [this] { setClippingMode(Classic); };
     hardButton.onClick = [this] { setClippingMode(Hard); };
+
+    updateUIForMode(currentMode);
 }
 
-void ClippingModesComponent::setClippingMode(ClippingMode mode) {
-    if (mode < Modern || mode > Hard) {
+void ClippingModesComponent::setClippingMode(ClippingMode mode)
+{
+    if (mode < Modern || mode > Hard)
+    {
         DBG("Invalid clipping mode selected.");
         return;
     }
@@ -24,8 +29,10 @@ void ClippingModesComponent::setClippingMode(ClippingMode mode) {
     updateUIForMode(mode);
 }
 
-void ClippingModesComponent::updateUIForMode(ClippingMode mode) {
-    switch (mode) {
+void ClippingModesComponent::updateUIForMode(ClippingMode mode)
+{
+    switch (mode)
+    {
         case Modern:
             modernButton.setColour(TextButton::buttonColourId, Colours::blue);
             classicButton.setColour(TextButton::buttonColourId, Colours::grey);
@@ -42,9 +49,9 @@ void ClippingModesComponent::updateUIForMode(ClippingMode mode) {
             hardButton.setColour(TextButton::buttonColourId, Colours::blue);
             break;
     }
-    // Additional UI feedback can be added here
 }
 
-ClippingModesComponent::ClippingMode ClippingModesComponent::getCurrentMode() const {
+ClippingModesComponent::ClippingMode ClippingModesComponent::getCurrentMode() const
+{
     return currentMode;
 }

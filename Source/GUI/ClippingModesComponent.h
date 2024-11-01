@@ -13,10 +13,10 @@ public:
 
     ClippingModesComponent();
     void setClippingMode(ClippingMode mode);
-    void updateUIForMode(ClippingMode mode);
     ClippingMode getCurrentMode() const;
 
 private:
+    void updateUIForMode(ClippingMode mode);
     ClippingMode currentMode;
 };
 

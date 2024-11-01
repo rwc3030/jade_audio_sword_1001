@@ -1,4 +1,6 @@
 #include "ClippingModesComponent.h"
+#include <iostream>
+#include <cassert>
 
 ClippingModesComponent::ClippingModesComponent() {
     currentMode = ClippingMode::Modern;
@@ -16,7 +18,7 @@ void ClippingModesComponent::setClippingMode(ClippingMode mode) {
     }
 
     currentMode = mode;
-    updateUIForMode(mode);
+    updateUIForMode(currentMode);
 }
 
 void ClippingModesComponent::updateUIForMode(ClippingMode mode) {

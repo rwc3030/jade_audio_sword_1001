@@ -20,3 +20,8 @@
 2. **Documentation Gap**: There is a lack of user documentation regarding the expected behavior of each clipping mode.
 3. **UI Reset Issue**: The UI does not reset to a default state after an invalid selection, which may confuse users.
 
+## File and Directory Structure Adjustments
+- Adjusted the project structure to align with the requirements in 'README.md':
+  - Created directories for `Source/Core`, `Source/GUI`, `Source/Presets`, `Resources/Images`, `Resources/Presets`, `Tests/DSP`, `Tests/GUI`, `Tests/Integration`, and `Builds/Windows`, `Builds/MacOS`, `Builds/Linux`.
+  - Ensured all files are placed in their respective directories as per the standard project structure.
+

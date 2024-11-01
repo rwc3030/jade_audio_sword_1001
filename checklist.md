@@ -8,3 +8,4 @@
 - [x] Address issues in 'next_feature.txt' by implementing necessary fixes.
 - [x] Log updates in 'checklist_progress.md'.
 - [x] Verify all issues are resolved for the feature in 'next_feature.txt'.  # Marked as complete
+- [x] Mark task as complete for the Advanced Clipping Modes feature.

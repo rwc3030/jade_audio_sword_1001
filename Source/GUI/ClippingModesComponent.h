@@ -3,27 +3,22 @@
 
 #include <JuceHeader.h>
 
-class ClippingModesComponent : public juce::Component
-{
+class ClippingModesComponent : public Component {
 public:
-    ClippingModesComponent();
+    enum ClippingMode { Modern, Classic, Hard };
 
-    void paint(juce::Graphics& g) override;
+    ClippingModesComponent();
+    void paint(Graphics& g) override;
     void resized() override;
 
-    enum class ClippingMode { Modern, Classic, Hard };
-
+    void setClippingMode(ClippingMode mode);
     ClippingMode getCurrentMode() const;
-    void setClippingMode(ClippingMode mode); // Added function declaration
 
 private:
-    void updateUIForMode(ClippingMode mode); // Added function declaration
+    void updateUIForMode(ClippingMode mode);
 
     ClippingMode currentMode;
-
-    juce::TextButton modernButton;
-    juce::TextButton classicButton;
-    juce::TextButton hardButton;
+    TextButton modernButton, classicButton, hardButton;
 };
 
 #endif // CLIPPINGMODESCOMPONENT_H

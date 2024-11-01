@@ -19,7 +19,7 @@ void ClippingModesComponent::setClippingMode(ClippingMode mode) {
     }
 
     currentMode = mode;
-    updateUIForMode(currentMode);
+    updateUIForMode(mode);
 }
 
 void ClippingModesComponent::updateUIForMode(ClippingMode mode) {
@@ -27,12 +27,15 @@ void ClippingModesComponent::updateUIForMode(ClippingMode mode) {
     switch (mode) {
         case ClippingMode::Modern:
             // Update UI for Modern mode
+            std::cout << "Switched to Modern mode." << std::endl;
             break;
         case ClippingMode::Classic:
             // Update UI for Classic mode
+            std::cout << "Switched to Classic mode." << std::endl;
             break;
         case ClippingMode::Hard:
             // Update UI for Hard mode
+            std::cout << "Switched to Hard mode." << std::endl;
             break;
     }
 }

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cassert>
-#include "ClippingModesComponent.h"
+#include "ClippingModesComponent.cpp"
 
 void testSetClippingMode() {
     ClippingModesComponent component;
@@ -20,9 +20,18 @@ void testInvalidClippingMode() {
     assert(component.getCurrentMode() == ClippingModesComponent::ClippingMode::Modern); // Should remain Modern
 }
 
+void testRapidModeSwitching() {
+    ClippingModesComponent component;
+    component.setClippingMode(ClippingModesComponent::ClippingMode::Classic);
+    component.setClippingMode(ClippingModesComponent::ClippingMode::Hard);
+    component.setClippingMode(ClippingModesComponent::ClippingMode::Modern);
+    assert(component.getCurrentMode() == ClippingModesComponent::ClippingMode::Modern);
+}
+
 int main() {
     testSetClippingMode();
     testInvalidClippingMode();
+    testRapidModeSwitching();
     std::cout << "All tests passed!" << std::endl;
     return 0;
 }

@@ -53,3 +53,7 @@ The plugin offers extensive technical capabilities including:
 - Available in VST3, AU, and AAX formats with support for 16, 24, or 32-bit sessions and sample rates up to 192 kHz.
 - Additional technical capabilities such as High (4x), Pristine (8x), and Extra Pristine (16x) oversampling rates with options for both Linear Phase and Minimum Phase types.
 - Secured through NickyP Lock Authorization during the standard plugin installation process for optimal performance and security.
+
+## Review Process
+- Step 0.3: Review the design and feature alignment with the overall vision of the Jade Audio Sword plugin to ensure all aspects are consistent and meet the outlined standards.
+

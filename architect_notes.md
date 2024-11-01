@@ -27,6 +27,20 @@
 2. **Documentation Gap**: There is a lack of user documentation regarding the expected behavior of each clipping mode.
 3. **UI Reset Issue**: The UI does not reset to a default state after an invalid selection, which may confuse users.
 
+## Project Status Summary
+### Completed Tasks
+- Advanced Clipping Modes feature has been implemented and tested.
+- All identified issues related to the Advanced Clipping Modes feature have been addressed.
+
+### Project Gaps
+- Need for comprehensive user documentation.
+- Input validation enhancements required for mode switching.
+- UI reset mechanism needs to be implemented.
+
+### Unresolved Issues
+- Potential memory leaks during rapid mode switching.
+- Additional unit tests for edge cases related to clipping mode transitions are still needed.
+
 ## File and Directory Structure Adjustments
 - Adjusted the project structure to align with the requirements in 'README.md':
   - Created directories for `Source/Core`, `Source/GUI`, `Source/Presets`, `Resources/Images`, `Resources/Presets`, `Tests/DSP`, `Tests/GUI`, `Tests/Integration`, and `Builds/Windows`, `Builds/MacOS`, `Builds/Linux`.

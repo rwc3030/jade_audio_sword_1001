@@ -26,6 +26,8 @@
 5. Edge cases where the user rapidly switches modes may cause unexpected behavior in the UI.
 6. Logical flow issues in the mode switching function may lead to inconsistent behavior.
 7. Lack of unit tests for edge cases related to clipping mode transitions.
+8. Review of generated code revealed potential logical flow issues that need to be addressed.
+9. Additional edge cases identified during review that require handling.
 
 ## Status
 - All issues have been identified and recorded. The feature is now marked as in progress.

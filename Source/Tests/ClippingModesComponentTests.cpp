@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cassert>
-#include "ClippingModesComponent.cpp"
 
 void testSetClippingMode() {
     ClippingModesComponent component;

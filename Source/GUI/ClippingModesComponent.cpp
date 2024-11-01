@@ -19,7 +19,7 @@ public:
         }
 
         currentMode = mode;
-        updateUIForMode(currentMode);
+        updateUIForMode(mode);
     }
 
     void updateUIForMode(ClippingMode mode) {
@@ -62,9 +62,17 @@ void testInvalidClippingMode() {
     assert(component.getCurrentMode() == ClippingModesComponent::ClippingMode::Modern); // Should remain Modern
 }
 
+void testRapidModeSwitching() {
+    ClippingModesComponent component;
+    component.setClippingMode(ClippingModesComponent::ClippingMode::Classic);
+    component.setClippingMode(ClippingModesComponent::ClippingMode::Hard);
+    assert(component.getCurrentMode() == ClippingModesComponent::ClippingMode::Hard);
+}
+
 int main() {
     testSetClippingMode();
     testInvalidClippingMode();
+    testRapidModeSwitching();
     std::cout << "All tests passed!" << std::endl;
     return 0;
 }

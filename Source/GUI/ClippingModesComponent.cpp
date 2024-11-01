@@ -9,7 +9,9 @@ public:
 
     void setClippingMode(ClippingMode mode) {
         if (mode < ClippingMode::Modern || mode > ClippingMode::Hard) {
-            std::cerr << "Invalid clipping mode selected." << std::endl;
+            std::cerr << "Invalid clipping mode selected. Resetting to default mode." << std::endl;
+            currentMode = ClippingMode::Modern; // Reset to default mode
+            updateUIForMode(currentMode);
             return;
         }
 
@@ -59,7 +61,7 @@ void testSetClippingMode() {
 void testInvalidClippingMode() {
     ClippingModesComponent component;
     component.setClippingMode(static_cast<ClippingModesComponent::ClippingMode>(-1)); // Invalid mode
-    assert(component.getCurrentMode() == ClippingModesComponent::ClippingMode::Modern); // Should remain Modern
+    assert(component.getCurrentMode() == ClippingModesComponent::ClippingMode::Modern); // Should reset to Modern
 }
 
 void testRapidModeSwitching() {

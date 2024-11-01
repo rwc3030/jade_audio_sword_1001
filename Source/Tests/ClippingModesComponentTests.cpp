@@ -21,11 +21,10 @@ void testRapidModeSwitching() {
     assert(component.getCurrentMode() == ClippingModesComponent::ClippingMode::Hard);
 }
 
-void testEdgeCaseModeSwitching() {
+void testUIResetOnInvalidMode() {
     ClippingModesComponent component;
-    component.setClippingMode(ClippingModesComponent::ClippingMode::Modern);
     component.setClippingMode(static_cast<ClippingModesComponent::ClippingMode>(-1)); // Invalid mode
-    assert(component.getCurrentMode() == ClippingModesComponent::ClippingMode::Modern); // Should remain Modern
+    assert(component.getCurrentMode() == ClippingModesComponent::ClippingMode::Modern); // Should reset to Modern
 }
 
 int main() {
@@ -34,7 +33,7 @@ int main() {
     testSetClippingMode(ClippingModesComponent::ClippingMode::Modern);
     testInvalidClippingMode();
     testRapidModeSwitching();
-    testEdgeCaseModeSwitching();
+    testUIResetOnInvalidMode();
     std::cout << "All tests passed!" << std::endl;
     return 0;
 }

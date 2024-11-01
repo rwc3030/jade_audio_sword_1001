@@ -21,3 +21,4 @@
   5. Rapid mode switching handled.
   6. Logical flow in mode switching refactored.
   7. Unit tests for edge cases created.
+- The task for the Advanced Clipping Modes feature is now marked as complete.

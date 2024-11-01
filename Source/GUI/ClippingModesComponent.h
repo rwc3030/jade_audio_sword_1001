@@ -3,11 +3,7 @@
 
 class ClippingModesComponent {
 public:
-    enum class ClippingMode {
-        Modern,
-        Classic,
-        Hard
-    };
+    enum class ClippingMode { Modern, Classic, Hard };
 
     ClippingModesComponent();
     void setClippingMode(ClippingMode mode);

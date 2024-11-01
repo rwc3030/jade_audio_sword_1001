@@ -18,12 +18,8 @@ public:
             return;
         }
 
-        // Simulate UI feedback
-        updateUIForMode(mode);
-
-        // Switch mode
         currentMode = mode;
-        std::cout << "Clipping mode changed." << std::endl;
+        updateUIForMode(mode);
     }
 
     void updateUIForMode(ClippingMode mode) {

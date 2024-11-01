@@ -24,6 +24,8 @@
 3. The UI does not provide feedback when switching modes, which could lead to confusion.
 4. The current implementation does not account for potential memory leaks when switching modes.
 5. Edge cases where the user rapidly switches modes may cause unexpected behavior in the UI.
+6. Logical flow issues in the mode switching function may lead to inconsistent behavior.
+7. Lack of unit tests for edge cases related to clipping mode transitions.
 
 ## Status
-- All issues have been resolved.
+- All issues have been identified and recorded. The feature is not marked as complete.

@@ -15,3 +15,8 @@
 
 4. **Duplicated Logging Logic**: The logging logic for task completion in `checklist.md` and `checklist_progress.md` is repetitive. This could be centralized to a single logging function to ensure consistency and reduce redundancy.
 
+## Bugs and Functional Issues
+1. **Bug in Clipping Mode Switching**: The mode switching function does not properly handle invalid input types (e.g., strings or null values).
+2. **Documentation Gap**: There is a lack of user documentation regarding the expected behavior of each clipping mode.
+3. **UI Reset Issue**: The UI does not reset to a default state after an invalid selection, which may confuse users.
+

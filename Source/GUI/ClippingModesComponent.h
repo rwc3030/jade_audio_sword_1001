@@ -1,13 +1,11 @@
 #ifndef CLIPPINGMODESCOMPONENT_H
 #define CLIPPINGMODESCOMPONENT_H
 
-#include <JuceHeader.h>
+#include <iostream>
 
-class ClippingModesComponent : public Component
-{
+class ClippingModesComponent {
 public:
-    enum ClippingMode
-    {
+    enum class ClippingMode {
         Modern,
         Classic,
         Hard
@@ -15,17 +13,11 @@ public:
 
     ClippingModesComponent();
     void setClippingMode(ClippingMode mode);
+    void updateUIForMode(ClippingMode mode);
     ClippingMode getCurrentMode() const;
 
 private:
-    void updateUIForMode(ClippingMode mode);
-
     ClippingMode currentMode;
-    TextButton modernButton;
-    TextButton classicButton;
-    TextButton hardButton;
-
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(ClippingModesComponent)
 };
 
 #endif // CLIPPINGMODESCOMPONENT_H

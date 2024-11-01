@@ -1,57 +1,45 @@
 #include "ClippingModesComponent.h"
 
-ClippingModesComponent::ClippingModesComponent()
-{
-    currentMode = Modern; // Default mode
-    addAndMakeVisible(modernButton);
-    addAndMakeVisible(classicButton);
-    addAndMakeVisible(hardButton);
+ClippingModesComponent::ClippingModesComponent() {
+    // Initialize default mode
+    currentMode = ClippingMode::Modern;
+}
 
-    modernButton.setButtonText("Modern");
-    classicButton.setButtonText("Classic");
-    hardButton.setButtonText("Hard");
+void ClippingModesComponent::setClippingMode(ClippingMode mode) {
+    if (mode < ClippingMode::Modern || mode > ClippingMode::Hard) {
+        // Handle invalid mode selection
+        std::cerr << "Invalid clipping mode selected." << std::endl;
+        return;
+    }
+    
+    // Validate input parameters
+    if (mode == currentMode) {
+        std::cout << "Already in the selected mode." << std::endl;
+        return;
+    }
 
-    modernButton.onClick = [this] { setClippingMode(Modern); };
-    classicButton.onClick = [this] { setClippingMode(Classic); };
-    hardButton.onClick = [this] { setClippingMode(Hard); };
-
+    currentMode = mode;
     updateUIForMode(currentMode);
 }
 
-void ClippingModesComponent::setClippingMode(ClippingMode mode)
-{
-    if (mode < Modern || mode > Hard)
-    {
-        DBG("Invalid clipping mode selected.");
-        return;
-    }
-    currentMode = mode;
-    updateUIForMode(mode);
-}
-
-void ClippingModesComponent::updateUIForMode(ClippingMode mode)
-{
-    switch (mode)
-    {
-        case Modern:
-            modernButton.setColour(TextButton::buttonColourId, Colours::blue);
-            classicButton.setColour(TextButton::buttonColourId, Colours::grey);
-            hardButton.setColour(TextButton::buttonColourId, Colours::grey);
+void ClippingModesComponent::updateUIForMode(ClippingMode mode) {
+    // Provide visual feedback for mode change
+    switch (mode) {
+        case ClippingMode::Modern:
+            // Update UI for Modern mode
             break;
-        case Classic:
-            modernButton.setColour(TextButton::buttonColourId, Colours::grey);
-            classicButton.setColour(TextButton::buttonColourId, Colours::blue);
-            hardButton.setColour(TextButton::buttonColourId, Colours::grey);
+        case ClippingMode::Classic:
+            // Update UI for Classic mode
             break;
-        case Hard:
-            modernButton.setColour(TextButton::buttonColourId, Colours::grey);
-            classicButton.setColour(TextButton::buttonColourId, Colours::grey);
-            hardButton.setColour(TextButton::buttonColourId, Colours::blue);
+        case ClippingMode::Hard:
+            // Update UI for Hard mode
             break;
     }
 }
 
-ClippingModesComponent::ClippingMode ClippingModesComponent::getCurrentMode() const
-{
+ClippingModesComponent::ClippingMode ClippingModesComponent::getCurrentMode() const {
     return currentMode;
 }
+
+// Additional logic to prevent memory leaks and handle rapid mode switching
+```

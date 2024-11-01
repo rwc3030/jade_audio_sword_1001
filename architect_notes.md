@@ -6,6 +6,13 @@
 3. Mark task as complete for the Advanced Clipping Modes feature.
 4. Mark task as complete for the Advanced Clipping Modes feature.
 
+## Gaps to Feature Completeness
+1. **User Documentation**: There is a need for comprehensive user documentation that explains the functionality and expected behavior of each clipping mode.
+2. **Input Validation**: The mode switching function must be enhanced to properly handle invalid input types (e.g., strings or null values) to prevent crashes or undefined behavior.
+3. **UI Reset Mechanism**: Implement a mechanism to reset the UI to a default state after an invalid selection to improve user experience and reduce confusion.
+4. **Memory Management**: Ensure that all potential memory leaks are addressed, particularly during rapid mode switching.
+5. **Unit Tests for Edge Cases**: Create additional unit tests to cover edge cases related to clipping mode transitions, ensuring robustness.
+
 ## Code Duplication and Cleanup Actions
 1. **Redundant Test Functions**: The test functions in `Source\Tests\ClippingModesComponentTests.cpp` and `Source\GUI\ClippingModesUIComponent.cpp` have overlapping functionality. The same tests for clipping modes are implemented in both files, which can lead to maintenance challenges.
 

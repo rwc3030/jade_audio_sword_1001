@@ -28,4 +28,4 @@
 7. Lack of unit tests for edge cases related to clipping mode transitions.
 
 ## Status
-- All issues have been identified and recorded. The feature is not marked as complete.
+- All issues have been identified and recorded. The feature is now marked as in progress.

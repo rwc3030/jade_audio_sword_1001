@@ -33,6 +33,10 @@
 12. Step 3.7: Review the generated code for logical flow, edge cases, and functional integrity. Record any issues in 'next_feature.txt' under 'Issues to Address' and do not mark the feature as complete.
 13. Step 3.8: Review the generated code for logical flow, edge cases, and functional integrity. Record any issues in 'next_feature.txt' under 'Issues to Address' and do not mark the feature as complete.
 14. Step 3.9: Review the generated code for logical flow, edge cases, and functional integrity. Record any issues in 'next_feature.txt' under 'Issues to Address' and do not mark the feature as complete.
+15. Step 3.10: Review the generated code for logical flow, edge cases, and functional integrity. Record any issues in 'next_feature.txt' under 'Issues to Address' and do not mark the feature as complete.
+16. The mode switching function does not properly handle invalid input types (e.g., strings or null values).
+17. There is a lack of user documentation regarding the expected behavior of each clipping mode.
+18. The UI does not reset to a default state after an invalid selection, which may confuse users.
 
 ## Status
 - All issues have been identified and recorded. The feature is now marked as in progress.

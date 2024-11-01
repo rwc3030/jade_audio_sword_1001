@@ -47,3 +47,5 @@
 - Feature: Advanced Clipping Modes
 - User Story: As a user, I want to have multiple clipping modes (Modern, Classic, Hard) so that I can choose the best sound for my audio processing needs.
 - Acceptance Criteria: The plugin must support three distinct clipping modes: Modern, Classic, and Hard.
+- Task marked as in progress.
+

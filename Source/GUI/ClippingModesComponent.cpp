@@ -38,6 +38,11 @@ public:
         }
     }
 
+    void resetUI() {
+        currentMode = ClippingMode::Modern; // Reset to default mode
+        updateUIForMode(currentMode);
+    }
+
     ClippingMode getCurrentMode() const {
         return currentMode;
     }

@@ -25,7 +25,7 @@ public:
                 break;
             default:
                 std::cerr << "Invalid selection. Please choose a valid clipping mode." << std::endl;
-                clippingComponent.setClippingMode(static_cast<ClippingModesComponent::ClippingMode>(-1)); // Handle invalid selection
+                clippingComponent.resetUI(); // Reset UI on invalid selection
                 break;
         }
     }

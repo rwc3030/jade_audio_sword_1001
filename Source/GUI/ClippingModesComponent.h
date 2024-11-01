@@ -16,6 +16,7 @@ public:
 
 private:
     void updateUIForMode(ClippingMode mode);
+    void cleanupResources(); // New method to clean up resources
 
     ClippingMode currentMode;
     TextButton modernButton, classicButton, hardButton;

@@ -19,7 +19,7 @@ public:
         }
 
         currentMode = mode;
-        updateUIForMode(mode);
+        updateUIForMode(currentMode);
     }
 
     void updateUIForMode(ClippingMode mode) {

@@ -1,8 +1,6 @@
 #ifndef CLIPPINGMODESCOMPONENT_H
 #define CLIPPINGMODESCOMPONENT_H
 
-#include <iostream>
-
 class ClippingModesComponent {
 public:
     enum class ClippingMode {

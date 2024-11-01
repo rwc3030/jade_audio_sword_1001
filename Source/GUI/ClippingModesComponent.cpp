@@ -1,6 +1,5 @@
 #include "ClippingModesComponent.h"
 #include <iostream>
-#include <cassert>
 
 ClippingModesComponent::ClippingModesComponent() {
     currentMode = ClippingMode::Modern;

@@ -40,6 +40,3 @@ void ClippingModesComponent::updateUIForMode(ClippingMode mode) {
 ClippingModesComponent::ClippingMode ClippingModesComponent::getCurrentMode() const {
     return currentMode;
 }
-
-// Additional logic to prevent memory leaks and handle rapid mode switching
-```

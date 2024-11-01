@@ -1,5 +1,6 @@
 #include <iostream>
-#include "ClippingModesComponent.h"
+
+class ClippingModesComponent; // Forward declaration
 
 class ClippingModesUIComponent {
 public:
@@ -24,9 +25,10 @@ public:
                 clippingComponent.setClippingMode(ClippingModesComponent::ClippingMode::Hard);
                 break;
             default:
-                std::cerr << "Invalid selection." << std::endl;
-                break;
+                std::cout << "Invalid selection. Please choose a valid mode." << std::endl;
+                return;
         }
+        std::cout << "Mode switched successfully." << std::endl; // Feedback on mode switching
     }
 
 private:

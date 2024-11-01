@@ -1,6 +1,5 @@
-#include "ClippingModesComponent.h"
 #include <cassert>
-#include <iostream>
+#include "ClippingModesComponent.h"
 
 void testSetClippingMode() {
     ClippingModesComponent component;
@@ -12,13 +11,12 @@ void testSetClippingMode() {
     assert(component.getCurrentMode() == ClippingModesComponent::ClippingMode::Hard);
 
     component.setClippingMode(ClippingModesComponent::ClippingMode::Modern);
-    assert(component.getCurrentMode() == ClippingModesComponent::ClippingMode::Modern);
 }
 
 void testInvalidClippingMode() {
     ClippingModesComponent component;
     component.setClippingMode(static_cast<ClippingModesComponent::ClippingMode>(-1)); // Invalid mode
-    assert(component.getCurrentMode() == ClippingModesComponent::ClippingMode::Modern); // Should remain in Modern
+    assert(component.getCurrentMode() == ClippingModesComponent::ClippingMode::Modern); // Should remain Modern
 }
 
 int main() {

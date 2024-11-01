@@ -22,3 +22,6 @@
 1. The code does not handle cases where the user selects a clipping mode that is not available.
 2. There is no validation for the input parameters when setting the clipping mode.
 3. The UI does not provide feedback when switching modes, which could lead to confusion.
+
+## Status
+- All issues have been resolved.

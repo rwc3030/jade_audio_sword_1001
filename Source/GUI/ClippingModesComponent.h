@@ -14,9 +14,10 @@ public:
     enum class ClippingMode { Modern, Classic, Hard };
 
     ClippingMode getCurrentMode() const;
+    void setClippingMode(ClippingMode mode); // Added function declaration
 
 private:
-    void setClippingMode(ClippingMode mode);
+    void updateUIForMode(ClippingMode mode); // Added function declaration
 
     ClippingMode currentMode;
 

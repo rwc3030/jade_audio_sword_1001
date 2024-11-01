@@ -22,6 +22,8 @@
 1. The code does not handle cases where the user selects a clipping mode that is not available.
 2. There is no validation for the input parameters when setting the clipping mode.
 3. The UI does not provide feedback when switching modes, which could lead to confusion.
+4. The current implementation does not account for potential memory leaks when switching modes.
+5. Edge cases where the user rapidly switches modes may cause unexpected behavior in the UI.
 
 ## Status
 - All issues have been resolved.

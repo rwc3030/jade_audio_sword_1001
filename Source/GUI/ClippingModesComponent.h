@@ -1,6 +1,9 @@
 #ifndef CLIPPINGMODESCOMPONENT_H
 #define CLIPPINGMODESCOMPONENT_H
 
+#include <iostream>
+#include <cassert>
+
 class ClippingModesComponent {
 public:
     enum class ClippingMode { Modern, Classic, Hard };

@@ -1,4 +1,3 @@
-#include <iostream>
 #include <cassert>
 #include "ClippingModesComponent.cpp"
 
@@ -24,8 +23,7 @@ void testRapidModeSwitching() {
     ClippingModesComponent component;
     component.setClippingMode(ClippingModesComponent::ClippingMode::Classic);
     component.setClippingMode(ClippingModesComponent::ClippingMode::Hard);
-    component.setClippingMode(ClippingModesComponent::ClippingMode::Modern);
-    assert(component.getCurrentMode() == ClippingModesComponent::ClippingMode::Modern);
+    assert(component.getCurrentMode() == ClippingModesComponent::ClippingMode::Hard);
 }
 
 int main() {

@@ -25,13 +25,9 @@ public:
                 break;
             default:
                 std::cout << "Invalid selection. Please choose a valid mode." << std::endl;
-                return;
+                break;
         }
-        std::cout << "Mode selected successfully." << std::endl; // Feedback to user
     }
-
-private:
-    ClippingModesComponent& clippingComponent;
 };
 
 int main() {

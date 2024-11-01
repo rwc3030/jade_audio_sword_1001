@@ -31,4 +31,5 @@
 - The task for the Advanced Clipping Modes feature is now marked as complete.
 - All issues have been resolved, and the feature is ready for release.
 - Final verification completed for all tasks in 'next_feature.txt'.
+- Task marked as in progress for the next feature extraction.
 

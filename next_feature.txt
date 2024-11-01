@@ -39,3 +39,10 @@
   1. The mode switching function does not properly handle invalid input types (e.g., strings or null values).
   2. There is a lack of user documentation regarding the expected behavior of each clipping mode.
   3. The UI does not reset to a default state after an invalid selection, which may confuse users.
+
+## Logged Details
+- Milestone: Version 1.0 Release
+- Epic: Audio Processing Enhancements
+- Feature: Advanced Clipping Modes
+- User Story: As a user, I want to have multiple clipping modes (Modern, Classic, Hard) so that I can choose the best sound for my audio processing needs.
+- Acceptance Criteria: The plugin must support three distinct clipping modes: Modern, Classic, and Hard.

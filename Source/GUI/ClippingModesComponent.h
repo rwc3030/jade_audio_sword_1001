@@ -11,9 +11,9 @@ public:
     ClippingModesComponent();
     void setClippingMode(ClippingMode mode);
     ClippingMode getCurrentMode() const;
+    void updateUIForMode(ClippingMode mode); // Added method declaration
 
 private:
-    void updateUIForMode(ClippingMode mode);
     ClippingMode currentMode;
 };
 

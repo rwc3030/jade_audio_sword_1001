@@ -1,5 +1,5 @@
 #include <iostream>
-#include "ClippingModesComponent.cpp"
+#include "ClippingModesComponent.h"
 
 class ClippingModesUIComponent {
 public:

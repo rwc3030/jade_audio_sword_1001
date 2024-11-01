@@ -1,21 +1,4 @@
-#include <iostream>
-
-class ClippingModesComponent {
-public:
-    enum class ClippingMode {
-        Modern,
-        Classic,
-        Hard
-    };
-
-    ClippingModesComponent();
-    void setClippingMode(ClippingMode mode);
-    void updateUIForMode(ClippingMode mode);
-    ClippingMode getCurrentMode() const;
-
-private:
-    ClippingMode currentMode;
-};
+#include "ClippingModesComponent.h"
 
 ClippingModesComponent::ClippingModesComponent() {
     currentMode = ClippingMode::Modern;
@@ -53,7 +36,3 @@ void ClippingModesComponent::updateUIForMode(ClippingMode mode) {
 ClippingModesComponent::ClippingMode ClippingModesComponent::getCurrentMode() const {
     return currentMode;
 }
-
-// Additional code for memory leak prevention and rapid mode switching handling
-// would be implemented here, including unit tests for edge cases.
-

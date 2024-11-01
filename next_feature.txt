@@ -28,6 +28,7 @@
 7. Lack of unit tests for edge cases related to clipping mode transitions.
 8. Review of generated code revealed potential logical flow issues that need to be addressed.
 9. Additional edge cases identified during review that require handling.
+10. Step 3.5: Review the generated code for logical flow, edge cases, and functional integrity. Record any issues in 'next_feature.txt' under 'Issues to Address' and do not mark the feature as complete.
 
 ## Status
 - All issues have been identified and recorded. The feature is now marked as in progress.
